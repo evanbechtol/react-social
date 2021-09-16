@@ -1,0 +1,15 @@
+.header {
+    background-color: #005eb8;
+    color: white;
+    justify-content: space-between;
+}
+
+.header__navigation-button {
+    align-items: center;
+    padding-left: 8px;
+}
+
+.header__actions {
+    align-items: center;
+    padding-right: 8px;
+}
