@@ -1,5 +1,7 @@
 import "../../assets/css/layout.css";
 import "./Post.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsisH, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 const Post = ({post}) => {
   return (
@@ -11,7 +13,9 @@ const Post = ({post}) => {
               </div>
 
               <div className="post__actions">
-                  <button id={`actions-button-post-${post.id}`} label="Actions">Actions</button>
+                  <button id={`actions-button-post-${post.id}`} aria-label="Actions">
+                    <FontAwesomeIcon icon={faEllipsisH} />
+                  </button>
               </div>
           </div>
 
@@ -20,7 +24,9 @@ const Post = ({post}) => {
           </div>
 
           <div className="row post_reactions">
-              <button id={`like-post-${post.id}`} label="Like">Like</button>
+              <button id={`like-post-${post.id}`} aria-label="Like">
+                <FontAwesomeIcon icon={faThumbsUp} size="lg" />
+              </button>
           </div>
       </div>
   );
