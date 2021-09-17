@@ -54,13 +54,13 @@
 }
 
 .post_reactions {
+    margin: 16px 0 8px 8px;
     align-content: center;
     justify-content: start;
 }
 
 .post_reactions button {
     background: none;
-    border: 1px solid #005eb8;
     color: #005eb8;
     border-radius: 4px;
 }
