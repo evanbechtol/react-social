@@ -24,7 +24,7 @@ export const useEventListener = (element, eventName, handler) => {
             }
         };
 
-        target.current.addEventListener(eventName, eventListener);
+        target.addEventListener(eventName, eventListener);
 
         // Remove the listener when component unmounts
         return () => target.current.removeEventListener(eventName, eventListener);
