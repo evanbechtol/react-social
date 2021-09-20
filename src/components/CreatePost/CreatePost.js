@@ -14,8 +14,8 @@ const CreatePost = (props) => {
 
     return (
         <div className="create-post__container">
-            <input placeholder="Start typing..." value={enteredPost} onChange={handleInputChanged}/>
-            <button onClick={handleCreatePost}>Post</button>
+            <input className="create-post__input" placeholder="Start typing..." value={enteredPost} onChange={handleInputChanged}/>
+            <button className="create-post__button" onClick={handleCreatePost}>Post</button>
         </div>
     );
 };

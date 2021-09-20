@@ -7,7 +7,6 @@ import httpService from "../../services/httpService";
 import {v4 as uuidv4} from 'uuid';
 
 const Feed = () => {
-    const [refreshFeed, setRefreshFeed] = useState(true);
     const [posts, setPosts] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -24,7 +23,7 @@ const Feed = () => {
                 })
                 .finally(() => setIsLoading(false));
         }, 2000);
-    }, [refreshFeed]);
+    }, []);
 
     const handleCreatePost = (e) => {
         const newPost = {id: uuidv4(), userId: 1, title: "Some Title", body: e};
@@ -32,15 +31,18 @@ const Feed = () => {
     };
 
     return (
-        <div className="feed__container justify-center align-content-center">
-            <CreatePost onCreatePost={handleCreatePost}/>
-
-            {
-                isLoading
-                    ? "Loading...."
-                    : <FeedList posts={posts}/>
-            }
-        </div>
+        <>
+            <div className="feed__container justify-center align-content-center">
+                <CreatePost className="create-post__container" onCreatePost={handleCreatePost}/>
+            </div>
+            <div className="feed__container justify-center align-content-center">
+                {
+                    isLoading
+                        ? "Loading...."
+                        : <FeedList posts={posts}/>
+                }
+            </div>
+        </>
     );
 };
 
