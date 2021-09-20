@@ -1,13 +1,13 @@
 import "../../assets/css/layout.css";
-import "./Feed.css"
+import "./FeedList.css"
 import Post from "../Post/Post";
 import {useEffect, useState} from "react";
 import httpService from "../../services/httpService";
 
-const Feed = (props) => {
+const FeedList = (props) => {
     return (
         <></>
     );
 };
 
-export default Feed;
+export default FeedList;
