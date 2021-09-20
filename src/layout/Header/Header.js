@@ -5,32 +5,9 @@ import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef } from "react";
 
 const Header = ( props ) => {
-  let navRef = useRef( null );
-
-  useEffect( () => {
-    const innerRef = navRef;
-    innerRef.current.addEventListener( "click", () => console.log( "did it" ) );
-    return () => innerRef.current.removeEventListener( "click" );
-  }, [] );
 
   return (
     <>
-      <div className="header flex-container justify-center align-content-center">
-        <div ref={navRef}
-             className="flex-container header__navigation-button-container">
-          <button type="button" className="header__navigation-button">
-            <FontAwesomeIcon icon={faBars} size="lg" />
-          </button>
-        </div>
-
-        <h2 className="header__heading">{props.heading}</h2>
-
-        <div className="flex-container header__actions-container">
-          <button type="button" className="header__navigation-actions">
-            <FontAwesomeIcon icon={faUser}/>
-          </button>
-        </div>
-      </div>
     </>
   );
 };
