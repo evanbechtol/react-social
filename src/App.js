@@ -1,6 +1,6 @@
 import './App.css';
 import Header from "./layout/Header/Header";
-import Feed from "./components/Feed/Feed";
+import Feed from "./views/Feed/Feed";
 
 function App() {
     return (

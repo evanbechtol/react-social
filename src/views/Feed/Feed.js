@@ -1,6 +1,7 @@
+import "./Feed.css";
 import "../../assets/css/layout.css";
-import "./Feed.css"
-import Post from "../Post/Post";
+import CreatePost from "../../components/CreatePost/CreatePost";
+import FeedList from "../../components/FeedList/FeedList";
 import {useEffect, useState} from "react";
 import httpService from "../../services/httpService";
 
@@ -24,26 +25,17 @@ const Feed = (props) => {
         }, 2000);
     }, [refreshFeed]);
 
-    const ListOfPosts = () => {
-        return !posts.length
-            ? "No posts to display"
-            : posts.map(post => {
-                return (
-                    <div key={post.id} className="feed__post">
-                        <Post post={post}/>
-                    </div>
-                )
-            });
-    };
-
     return (
-        <div className="feed__container justify-center align-content-center">
-            {
-                isLoading
-                    ? "Loading...."
-                    : <ListOfPosts/>
-            }
-        </div>
+        <>
+            <CreatePost/>
+            <div className="feed__container justify-center align-content-center">
+                {
+                    isLoading
+                        ? "Loading...."
+                        : <FeedList posts={posts}/>
+                }
+            </div>
+        </>
     );
 };
 
