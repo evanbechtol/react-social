@@ -8,59 +8,6 @@
     box-shadow: 0 2px 10px #eee;
 }
 
-.post__header {
-    align-content: center;
-    justify-content: start;
-    margin-bottom: 12px;
-}
-
-.post__header-title {
-    display: flex;
-    flex-flow: row wrap;
-    flex-grow: 3;
-    align-content: center;
-    justify-content: start;
-    margin-bottom: 12px;
-    border-bottom: solid 1px #eee;
-}
-
-.post_actions {
-    align-self: end;
-    align-content: center;
-    justify-content: center;
-    position: relative;
-}
-
-.post__header-title {
-    flex-grow: 1;
-}
-
-.post__avatar {
-    display: flex;
-    align-items: center;
-    color: #aaa;
-    margin: 0 8px 0 0;
-    border-radius: 25px;
-}
-
-.post__title {
-    margin-left: 6px;
-    position: relative;
-    bottom: 2px;
-}
-
 .post__content {
     justify-content: start;
-}
-
-.post_reactions {
-    margin: 16px 0 8px 8px;
-    align-content: center;
-    justify-content: start;
-}
-
-.post_reactions button {
-    background: none;
-    color: #005eb8;
-    border-radius: 4px;
 }
