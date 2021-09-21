@@ -12,16 +12,17 @@ const Feed = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        setTimeout(() => {
-            httpService.get("https://jsonplaceholder.typicode.com/posts")
-                .then(response => {
-                    setPosts(response.data);
-                    console.log(response.data);
-                })
-                .catch(err => {
-                    console.error(err);
-                })
-                .finally(() => setIsLoading(false));
+        setTimeout(async () => {
+          try {
+            const {data} = await httpService.get("https://jsonplaceholder.typicode.com/posts");
+            setPosts(data);
+            console.log(data);
+          } catch ( err ) {
+            console.error(err );
+
+          } finally {
+            setIsLoading(false);
+          }
         }, 2000);
     }, []);
 
