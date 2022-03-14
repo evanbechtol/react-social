@@ -1,18 +1,14 @@
 import "../../assets/css/layout.css";
 import "./Header.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faUser} from "@fortawesome/free-solid-svg-icons";
-import {useRef} from "react";
-import {useEventListener} from "../../hooks/useEventListener";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
+import { useRef } from "react";
 
 const Header = (props) => {
     let navRef = useRef(null);
 
-    useEventListener(navRef, "click", () => console.log('did it'));
-
     return (
-        <>
-            <div className="header flex-container justify-center align-content-center">
+      <div className="header flex-container justify-center align-content-center">
                 <div ref={navRef}
                      className="flex-container header__navigation-button-container">
                     <button type="button" className="header__navigation-button">
@@ -28,7 +24,6 @@ const Header = (props) => {
                     </button>
                 </div>
             </div>
-        </>
     );
 };
 
