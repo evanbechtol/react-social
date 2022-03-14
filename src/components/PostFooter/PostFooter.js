@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 
-const PostFooter = ({post}) => {
+const PostFooter = ({id}) => {
   return (
-    <button id={`like-post-${post.id}`} aria-label="Like">
+    <button id={`like-post-${id}`} aria-label="Like">
       <FontAwesomeIcon icon={faThumbsUp} size="lg"/>
     </button>
   );
