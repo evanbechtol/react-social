@@ -10,6 +10,7 @@ const CreatePost = (props) => {
 
     const handleCreatePost = () => {
         props.onCreatePost(enteredPost);
+        setEnteredPost("");
     };
 
     return (
