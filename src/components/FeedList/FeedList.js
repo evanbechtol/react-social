@@ -1,5 +1,5 @@
 import "../../assets/css/layout.css";
-import "./FeedList.css"
+import "./FeedList.css";
 import Post from "../Post/Post";
 
 const FeedList = ({posts}) => {
@@ -10,7 +10,7 @@ const FeedList = ({posts}) => {
         : posts.map(post => {
           return (
             <div key={post.id} className="feed__post">
-              <Post post={post}/>
+              <Post title={post.title} id={post.id} body={post.body}/>
             </div>
           )
         })
